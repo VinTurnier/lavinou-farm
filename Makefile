@@ -3,7 +3,7 @@ TARGETS          := nrf52832_xxaa
 OUTPUT_DIRECTORY := _build
 
 SDK_ROOT := ${HOME}/nRF5SDK160098a08e2
-PROJ_DIR := ./
+PROJ_DIR := .
 
 $(OUTPUT_DIRECTORY)/nrf52832_xxaa.out: \
   LINKER_SCRIPT  := blinky_gcc_nrf52.ld
@@ -35,6 +35,7 @@ SRC_FILES += \
   $(PROJ_DIR)/main.cpp \
   $(PROJ_DIR)/modules/log/CLogging.cpp \
   $(PROJ_DIR)/modules/rtc_clock/CRTCClock.cpp \
+  $(PROJ_DIR)/modules/timer/STimer.cpp \
   $(PROJ_DIR)/modules/app/CApp.cpp \
   $(SDK_ROOT)/modules/nrfx/mdk/system_nrf52.c \
   $(SDK_ROOT)/modules/nrfx/drivers/src/nrfx_clock.c \
@@ -75,6 +76,7 @@ INC_FOLDERS += \
   $(SDK_ROOT)/components/libraries/log/src \
   $(PROJ_DIR)/modules/log \
   $(PROJ_DIR)/modules/rtc_clock \
+  $(PROJ_DIR)/modules/timer \
   $(PROJ_DIR)/modules/app \
   $(SDK_ROOT)/external/segger_rtt \
   \

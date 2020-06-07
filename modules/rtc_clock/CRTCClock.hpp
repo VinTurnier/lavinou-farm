@@ -7,6 +7,8 @@
 #include "nrfx_clock.h"
 
 #define NOW_MS() GET_APP_CTX()->rtcClock.counter
+#define TICKS_PER_SEC 1024
+#define RTC_FREQ 32768
 
 class CRTCClock
 {

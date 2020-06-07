@@ -4,23 +4,24 @@
 #include "CLogging.hpp"
 #include "CRTCClock.hpp"
 #include "SAppContext.hpp"
+#include "STimer.hpp"
 
 extern SAppContext *gpAppCtx;
 
 #define GET_APP_CTX() gpAppCtx
 
-struct CApp
+class CApp
 {
     public:
-        CApp();
-        void init(SAppContext& ctx);
+        CApp(SAppContext& ctx);
         bool run();
         uint32_t getTimeMS();
-
+        STimer holdoffLedTimer;
     private:
         CLogging logger;
         CRTCClock timer;
         SAppContext *_ctx;
+        uint32_t counter;
     
 };
 
