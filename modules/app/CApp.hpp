@@ -4,9 +4,11 @@
  * All rights reserved to OTR Labs copyright (c) 2020 
  * -----------------------------------------------------------------
  * Description:
- * 
+ *  The App class header file contains all declaration of CApp.cpp
  * -----------------------------------------------------------------
  * Author(s) & Notes:
+ * Vincent Turnier
+ * -NOTES: original
  *******************************************************************/
 #ifndef __SAPP_HPP
 #define __SAPP_HPP

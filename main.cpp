@@ -1,9 +1,3 @@
-#include <stdbool.h>
-#include <stdint.h>
-
-#include "nrf_log.h"
-#include "nrf_log_ctrl.h"
-
 /********************************************************************
  * main.cpp
  * Project: Lavinou Hive Monitoring (LHM)
@@ -15,6 +9,15 @@
  * Author(s) & Notes:
  *******************************************************************/
 
+// Standard Library
+#include <stdbool.h>
+#include <stdint.h>
+
+// NRF Library
+#include "nrf_log.h"
+#include "nrf_log_ctrl.h"
+
+// Local Modules
 #include "CApp.hpp"
 #include "SAppContext.hpp"
 

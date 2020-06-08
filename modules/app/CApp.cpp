@@ -2,11 +2,15 @@
  * CApp.cpp
  * Project: Lavinou Hive Monitoring (LHM)
  * All rights reserved to OTR Labs copyright (c) 2020 
- * -----------------------------------------------------------------
+ * ------------------------------------------------------------------
  * Description:
- * 
- * -----------------------------------------------------------------
+ *  The App class (CApp) is the top level application of the firmware
+ * This is where all sub applications or sub processes are be ini-
+ * tialized and run.
+ * ------------------------------------------------------------------
  * Author(s) & Notes:
+ * Vincent Turnier
+ * - NOTES: original
  *******************************************************************/
 #include "CApp.hpp"
 #include "boards.h"
