@@ -6,7 +6,7 @@ SDK_ROOT := ${HOME}/nRF5SDK160098a08e2
 PROJ_DIR := .
 
 $(OUTPUT_DIRECTORY)/nrf52832_xxaa.out: \
-  LINKER_SCRIPT  := blinky_gcc_nrf52.ld
+  LINKER_SCRIPT  := lavinou_farm_gcc_nrf52.ld
 
 # Source files common to all targets
 SRC_FILES += \
@@ -78,6 +78,7 @@ INC_FOLDERS += \
   $(PROJ_DIR)/modules/rtc_clock \
   $(PROJ_DIR)/modules/timer \
   $(PROJ_DIR)/modules/app \
+  $(PROJ_DIR)/debug \
   $(SDK_ROOT)/external/segger_rtt \
   \
   $(SDK_ROOT)/integration/nrfx/legacy \

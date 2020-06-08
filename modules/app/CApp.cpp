@@ -1,3 +1,13 @@
+/********************************************************************
+ * CApp.cpp
+ * Project: Lavinou Hive Monitoring (LHM)
+ * All rights reserved to OTR Labs copyright (c) 2020 
+ * -----------------------------------------------------------------
+ * Description:
+ * 
+ * -----------------------------------------------------------------
+ * Author(s) & Notes:
+ *******************************************************************/
 #include "CApp.hpp"
 #include "boards.h"
 #include "nrf_log.h"
@@ -8,7 +18,7 @@ CApp::CApp(SAppContext& ctx)
 {
     gpAppCtx = &ctx;
     _ctx = &ctx;
-    logger.init();
+    logger.init(ctx);
     timer.init(ctx);
     bsp_board_init(BSP_INIT_LEDS);
     holdoffLedTimer.setLimit(1000);

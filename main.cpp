@@ -4,18 +4,19 @@
 #include "nrf_log.h"
 #include "nrf_log_ctrl.h"
 
+/********************************************************************
+ * main.cpp
+ * Project: Lavinou Hive Monitoring (LHM)
+ * All rights reserved to OTR Labs copyright (c) 2020 
+ * -----------------------------------------------------------------
+ * Description:
+ * 
+ * -----------------------------------------------------------------
+ * Author(s) & Notes:
+ *******************************************************************/
+
 #include "CApp.hpp"
 #include "SAppContext.hpp"
-#include "STimer.hpp"
-
-// static void on_idle()
-// {
-//         // Wait for an event.
-//     __WFE();
-//     // Clear the internal event register.
-//     __SEV();
-//     __WFE();
-// }
 
 int main(void)
 {
