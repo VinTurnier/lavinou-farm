@@ -36,14 +36,9 @@ bool CApp::run()
     {
         holdoffLedTimer.start();
         bsp_board_led_invert(counter%4);
-        NRF_LOG_RAW_INFO("TS: %u, type: toggleLED, LED: %u\n",NOW_MS(),counter%4);
+        NRF_LOG_RAW_INFO("TS: %u, type: toggleLED, LED: %u\n",timer.now(ENOW_TYPE_MS),counter%4);
         counter++;
     }
 
     return true;
-}
-
-uint32_t CApp::getTimeMS()
-{
-    return (_ctx->rtcClock.counter*(1000.0f/TICKS_PER_SEC)) ;
 }

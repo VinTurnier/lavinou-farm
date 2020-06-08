@@ -27,7 +27,6 @@ class CApp
     public:
         CApp(SAppContext& ctx);
         bool run();
-        uint32_t getTimeMS();
         STimer holdoffLedTimer;
     private:
         CLogging logger;

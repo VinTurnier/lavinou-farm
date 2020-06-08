@@ -57,6 +57,28 @@ void CRTCClock::rtcConfig()
     return;
 }
 
+uint32_t CRTCClock::now(ENowType type)
+{
+    uint32_t now = 0;
+    switch (type)
+    {
+    case ENOW_TYPE_MS:
+        now = (_ctx->rtcClock.counter*(1000.0f/TICKS_PER_SEC));
+        break;
+    case ENOW_TYPE_SEC:
+        now = (_ctx->rtcClock.counter*(1.0f/TICKS_PER_SEC));
+        break;
+    case ENOW_TYPE_US:
+        now = (_ctx->rtcClock.counter*(100000.0f/TICKS_PER_SEC));
+        break;
+    default:
+
+        break;
+    }
+
+    return now;
+}
+
 /*********************** Prototype Declaration *********************/
 
 static void rtc_handler(nrf_drv_rtc_int_type_t type)

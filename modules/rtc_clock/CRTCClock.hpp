@@ -12,6 +12,7 @@
 #define __CRTCCLOCK_HPP
 
 #include <cstring>
+#include <string>
 
 #include "SAppContext.hpp"
 #include "nrfx_clock.h"
@@ -20,11 +21,19 @@
 #define TICKS_PER_SEC 1024
 #define RTC_FREQ 32768
 
+enum ENowType
+{
+    ENOW_TYPE_MS        = 0x0001,
+    ENOW_TYPE_SEC       = 0x0002,
+    ENOW_TYPE_US        = 0x0004,
+};
+
 class CRTCClock
 {
     public:
         CRTCClock();
         void init(SAppContext &ctx);
+        uint32_t now(ENowType type);
         
     
     private:
@@ -32,5 +41,7 @@ class CRTCClock
         SAppContext *_ctx;
 
 };
+
+
 
 #endif
